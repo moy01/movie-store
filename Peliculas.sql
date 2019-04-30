@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `Peliculas`.`Usuarios` (
   `Id_direccion` INT NOT NULL,
   PRIMARY KEY (`Id_usuarios`),
   INDEX `fk_Usuarios_Direccion1_idx` (`Id_direccion` ASC) VISIBLE,
-  CONSTRAINT `fk_Usuarios_Direccion1`
+  CONSTRAINT `fk_Usuarios_Direccion` 
     FOREIGN KEY (`Id_direccion`)
     REFERENCES `Peliculas`.`Direccion` (`Id_direccion`)
     ON DELETE NO ACTION
