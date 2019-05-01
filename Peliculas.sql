@@ -165,3 +165,32 @@ CREATE TABLE IF NOT EXISTS `Peliculas`.`Total_pagar` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Cliente`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Peliculas`.`Cliente` (
+  `Id_cliente` INT NOT NULL,
+  `Nombre` VARCHAR(45) NULL,
+  `Ap` VARCHAR(45) NULL,
+  `Am` VARCHAR(45) NULL,
+  `Correo` VARCHAR(45) NULL,
+  `Telefono` VARCHAR(45) NULL,
+  `Id_pelicula` INT NULL,
+  `Id_direccion` INT NOT NULL,
+  PRIMARY KEY (`Id_cliente`),
+  INDEX `fk_Usuarios__idx` (`Id_direccion` ASC) VISIBLE,
+  CONSTRAINT `fk_Detalle_pedido_Libro1`
+    FOREIGN KEY (`Id_pelicula`)
+    REFERENCES `Peliculas`.`Pelicula` (`Id_pelicula`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION),
+  CONSTRAINT `fk_Usuarios_Direccion` 
+    FOREIGN KEY (`Id_direccion`)
+    REFERENCES `Peliculas`.`Direccion` (`Id_direccion`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+               
