@@ -199,5 +199,5 @@ FOREIGN KEY (`Id_renta_o_venta`)
     FOREIGN KEY (`Id_direccion`)
     REFERENCES `Peliculas`.`Direccion` (`Id_direccion`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION) 
 ENGINE = InnoDB;
