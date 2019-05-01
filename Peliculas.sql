@@ -172,6 +172,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `Peliculas`.`Cliente` (
   `Id_cliente` INT NOT NULL,
   `Nombre` VARCHAR(45) NULL,
+  `Usuario` VARCHAR(45) NULL,
   `Ap` VARCHAR(45) NULL,
   `Am` VARCHAR(45) NULL,
   `Correo` VARCHAR(45) NULL,
