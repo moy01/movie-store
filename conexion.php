@@ -6,7 +6,7 @@ function conexion()
 	$server="localhost";
 	$db="Peliculas";
 	$con=new mysqli($server,$user,$pass,$db);
-	if
+	
 	return $con;
 }
 ?>
