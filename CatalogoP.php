@@ -1,10 +1,10 @@
 <?php  
-
+include("conexion.php");
+ 
 $con=conexion();
-
-	$idp=$_POST['id_pelicula'];
-	$catalogo=mysqli_query($con,"SELECT Titulo,Director,Ano,Detalles,Clasificacion,Genero from pelicula where Disponible=si") or die "Error al extraer los datos";
-
+	$consulta="SELECT * from pelicula where Disponible='si'";
+	$catalogo=mysqli_query($con,$consulta);
+	
 	echo '<table border=1>';
 	echo '<tr>';
 	echo '<th id="Tp">Titulo</th>';
@@ -15,7 +15,8 @@ $con=conexion();
 	echo '<th id="Gp">Genero</th>';
 	echo '</tr>';
 
-	while ($res=mysqli_fetch_array($catalogo)) {
+	while ($res = mysqli_fetch_array($catalogo) ) 
+	{
 		echo '<tr>';
 		echo '<td>'.$res['Titulo'].'</td>';
 		echo '<td>'.$res['Director'].'</td>';
@@ -28,4 +29,5 @@ $con=conexion();
 
 	mysqli_close($con);
 	echo '</table>';
+//mysql_real_escape_string();
 ?>
