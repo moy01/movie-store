@@ -100,16 +100,20 @@
                 <span class="card-notify-year"><?php echo $res['Ano'] ?></span>
                 <img class="img-fluid centrado" src="img/<?php echo $res['img'] ?>" width="200" height="300" alt="Alternate Text" />
             </div>
+            <form action=" pelicula.php" method="POST">
             <div class="card-image-overlay m-auto text-center">
-                <span class="card-detail-badge">Rentar</span>
-                <span class="card-detail-badge">Comprar</span>
+                <input id=" " class="card-detail-badge" type="submit" name="renta" value="Rentar">
+                <input id=" " class="card-detail-badge" type="submit" name="comprar" value="Comprar">
             </div>
-            <div class="card-body text-center">
+            
+              <div class="card-body text-center">
                 <div class="ad-title m-auto">
-                    <h5>Ver más detalles</h5>
+                    <input  id="pelicula" type="hidden" name="pelicula" value="<?php echo $res['Id_pelicula'] ?>">
+                    <a href=""><h5><input class="card-detail-badge" type="submit" value="Ver más detalles"></h5></a>
                 </div>
-                <a class="ad-btn" href="#">View</a>
-            </div>
+              </div>
+            </form>
+            
         </div>
     </div>
 <?php 
