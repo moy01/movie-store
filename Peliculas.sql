@@ -76,6 +76,7 @@ CREATE TABLE IF NOT EXISTS `Peliculas`.`Pelicula` (
   `Clasificacion` VARCHAR(45) NULL,
   `Genero` VARCHAR(45) NULL,
   `Disponible` VARCHAR(45) NULL,
+  `img` VARCHAR(60) NULL,
   PRIMARY KEY (`Id_pelicula`))
 ENGINE = InnoDB;
 
