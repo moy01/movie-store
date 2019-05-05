@@ -5,7 +5,7 @@ $con=conexion();
 	$consulta="SELECT * from pelicula where Disponible='si'";
 	$catalogo=mysqli_query($con,$consulta);
 	
-	echo '<table border=1>';
+	/*echo '<table border=1>';
 	echo '<tr>';
 	echo '<th id="Tp">Titulo</th>';
 	echo '<th id="Dp">Director</th>';
@@ -29,5 +29,5 @@ $con=conexion();
 
 	mysqli_close($con);
 	echo '</table>';
-//mysql_real_escape_string();
+//mysql_real_escape_string();*/
 ?>

@@ -10,9 +10,10 @@ $res=mysqli_query($con,"SELECT * from cliente where usuario='$user' and password
 
 $row=mysqli_fetch_array($res);
 if ($row['usuario']==$user && $row['password']==$pass ) {
-	echo "Loegin success ".$row['usuario']=$user;
+	//echo "Loegin success ".$row['usuario']=$user;
+	header('Location: index.php');
 }else{
-	echo "Verifica tos datos";
+	echo "Verifica tus datos";
 }
 
 ?>

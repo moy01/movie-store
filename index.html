@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie-Store</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+    <br>
+    <br>
+    <div class="row" id="ads">
+
+<?php>
+include("CatalogoP.php");
+while ($res = mysqli_fetch_array($catalogo) ) 
+    {
+        ?>
+    <div class="col-md-4">
+        <div class="card rounded">
+            <div class="card-image">
+                <span class="card-notify-badge">Low KMS</span>
+                <span class="card-notify-year">año</span>
+                <img class="img/aquaman.jpg" alt="Alternate Text" />
+            </div>
+            <div class="card-image-overlay m-auto">
+                <span class="card-detail-badge">Used</span>
+                <span class="card-detail-badge">$28,000.00</span>
+                <span class="card-detail-badge">13000 Kms</span>
+            </div>
+            <div class="card-body text-center">
+                <div class="ad-title m-auto">
+                    <h5>Honda Accord LX</h5>
+                </div>
+                <a class="ad-btn" href="#">View</a>
+            </div>
+        </div>
+    </div>
+   
+<?php
+}
+?>
+</div>
+</div>
+</body>
+</html>
